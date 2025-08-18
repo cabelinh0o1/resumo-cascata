@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>resumo css - cascata e especificidade</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#cascata">cascata</a></li>
+        <li><a href="#especificidade">especificidade</a></li>
+        <li><a href="#combinacao">combinação</a></li>
+        <li><a href="#pseudo">pseudo-classes</a></li>
+        <li><a href="#display">display</a></li>
+        <li><a href="#boxmodel">box model</a></li>
+        <li><a href="#boxsizing">box-sizing</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="cascata">
+      <h1>regra da cascata no css</h1>
+      <p>o css segue a logica da <strong>cascata</strong>: qnd duas regra conflitam, a q tem maior <span class="destaque">especificidade</span> ou é lida por ultimo vence</p>
+    </section>
+
+    <section id="especificidade">
+      <h1>especificidade</h1>
+      <p>a especificidade define qual regra tem mais prioridade</p>
+      <ul>
+        <li>seletor por <strong>tag</strong> → menor peso</li>
+        <li>seletor por <strong>classe</strong> → peso medio</li>
+        <li>seletor por <strong>id</strong> → maior peso</li>
+      </ul>
+    </section>
+
+    <section id="combinacao">
+      <h1>combinação de seletores</h1>
+      <p><code>.primeiro h1</code> → pega todos os <span class="inline-exemplo">h1</span> dentro de .primeiro</p>
+      <p><code>.primeira > h1</code> → pega so os filho direto <span class="inline-exemplo">h1</span></p>
+      <p><code>.primeira h1 + h1</code> → pega o <span class="inline-exemplo">h1</span> logo depois de outro <span class="inline-exemplo">h1</span></p>
+    </section>
+
+    <section id="pseudo">
+      <h1>pseudo-classes</h1>
+      <p><code>:first-child</code> → pega o primeiro filho</p>
+      <p><code>:last-child</code> → pega o ultimo filho</p>
+      <p><code>:nth-child(n)</code> → pega o filho de numero n</p>
+      <p><code>:nth-of-type(n)</code> → pega o filho de um tipo especifico</p>
+    </section>
+
+    <section id="display">
+      <h1>display inline x block</h1>
+      <h2>inline</h2>
+      <p>n quebra a linha, so aceita margem horizontal. exemplo: <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;strong&gt;</code></p>
+      <p>exemplo: <span class="inline-exemplo">sou um span</span> <span class="inline-exemplo">to na mesma linha</span></p>
+
+      <h2>block</h2>
+      <p>quebra a linha, aceita width e height. exemplo: <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code></p>
+      <div class="block-exemplo">sou um bloco</div>
+      <div class="block-exemplo">ocupo a linha toda</div>
+    </section>
+
+    <section id="boxmodel">
+      <h1>box model: margin, padding e border</h1>
+      <p><strong>margin:</strong> espaço de fora</p>
+      <p><strong>padding:</strong> espaço de dentro</p>
+      <p><strong>border:</strong> a borda msm</p>
+      <h2>shorthand</h2>
+      <ul>
+        <li>1 valor → todos os lados</li>
+        <li>2 valores → top/bottom e left/right</li>
+        <li>3 valores → top, left/right, bottom</li>
+        <li>4 valores → top, right, bottom, left</li>
+      </ul>
+    </section>
+
+    <section id="boxsizing">
+      <h1>box-sizing</h1>
+      <p><code>box-sizing: border-box;</code> → largura ja inclui conteudo + padding + borda</p>
+      <div class="exemplo">
+        exemplo de box-sizing: border-box
+      </div>
+    </section>
+  </main>
+</body>
+</html>
