@@ -9,7 +9,7 @@ body {
   padding: 0;
 }
 
-/* header e nav */
+
 header {
   background: #333;
   color: white;
@@ -49,7 +49,7 @@ h1, h2 {
   color: #333;
 }
 
-/* destaques */
+
 .destaque {
   color: crimson;
   font-weight: bold;
